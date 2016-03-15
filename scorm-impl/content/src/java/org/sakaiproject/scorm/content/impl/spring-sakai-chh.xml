@@ -5,7 +5,8 @@
 
 	<!-- The Sakai version that makes use of the ContentHostingHandlerResolver to unzip and serve content -->
 	<bean id="org.sakaiproject.scorm.service.api.ScormResourceService"
-		class="org.sakaiproject.scorm.service.chh.impl.CHHResourceService">
+		class="org.sakaiproject.scorm.service.chh.impl.CHHResourceService"
+		singleton="true">
 		
 		<!-- Sakai API Service -->
 		<lookup-method name="configurationService" bean="org.sakaiproject.component.api.ServerConfigurationService" />
@@ -16,7 +17,8 @@
 	</bean>
 	
 	<bean id="org.sakaiproject.scorm.dao.api.SeqActivityTreeDao"
-		class="org.sakaiproject.scorm.dao.standalone.StandaloneActivityTreeDaoImpl">
+		class="org.sakaiproject.scorm.dao.standalone.StandaloneActivityTreeDaoImpl"
+		singleton="true">
 	</bean>
 	
 	<!-- This is just an ehcache for the content hosting handler below -->
@@ -35,6 +37,7 @@
 		Sakai content repository so the zip files can be read as virtual file systems -->
 	<bean id="org.sakaiproject.scorm.content.api.ScormCHH"
 		class="org.sakaiproject.scorm.content.impl.ScormCHH"
+		singleton="true"
 		init-method="init">
 		<lookup-method name="scormContentService" bean="org.sakaiproject.scorm.service.api.ScormContentService"/>
 		<lookup-method name="contentService" bean="org.sakaiproject.content.api.ContentHostingService" /> 

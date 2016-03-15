@@ -6,12 +6,12 @@
         <groupId>org.sakaiproject</groupId>
         <artifactId>master</artifactId>
         <relativePath>../master/pom.xml</relativePath>
-        <version>12-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
     </parent>
 
     <name>Sakai SCORM Project</name>
     <artifactId>sakai-scorm-base</artifactId>
-    <version>12-SNAPSHOT</version>
+    <version>10-SNAPSHOT</version>
     <packaging>pom</packaging>
     <organization>
         <name>Sakai Project</name>
@@ -41,12 +41,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>${sakai.spring.test.version}</version>
-                <scope>test</scope>
-            </dependency>
             <dependency>
                 <groupId>org.sakaiproject.scorm</groupId>
                 <artifactId>sakai-scorm-adl-impl</artifactId>
@@ -91,6 +85,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>

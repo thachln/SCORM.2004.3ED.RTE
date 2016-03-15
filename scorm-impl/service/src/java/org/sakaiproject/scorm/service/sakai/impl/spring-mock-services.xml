@@ -4,7 +4,8 @@
 
 	<!-- Grab the learner information from Sakai -->
 	<bean id="org.sakaiproject.scorm.service.api.LearningManagementSystem"
-		class="org.sakaiproject.scorm.service.sakai.impl.MockLearningManagementSystem">
+		class="org.sakaiproject.scorm.service.sakai.impl.MockLearningManagementSystem"
+		singleton="true">
 	</bean>
 	
 </beans>
