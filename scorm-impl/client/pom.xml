@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>sakai-scorm-base</artifactId>
-        <version>12-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -21,10 +21,6 @@
     <inceptionYear>2007</inceptionYear>
 
     <dependencies>
-        <dependency>
-            <groupId>org.sakaiproject.kernel</groupId>
-            <artifactId>sakai-kernel-api</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.sakaiproject.scorm</groupId>
             <artifactId>sakai-scorm-api</artifactId>
@@ -53,6 +49,10 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.sakaiproject.kernel</groupId>
+            <artifactId>sakai-kernel-api</artifactId>
         </dependency>
     </dependencies>
 </project>

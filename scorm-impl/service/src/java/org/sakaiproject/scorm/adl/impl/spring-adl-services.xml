@@ -12,7 +12,8 @@
 			</props>
 		</property>
 	</bean>
-	<bean id="org.sakaiproject.scorm.adl.ADLConsultantTarget" class="org.sakaiproject.scorm.adl.impl.ADLConsultantImpl">
+	<bean id="org.sakaiproject.scorm.adl.ADLConsultantTarget" class="org.sakaiproject.scorm.adl.impl.ADLConsultantImpl"
+		singleton="true">
 		
 		<!-- Data Access Objects -->
 		<lookup-method name="contentPackageManifestDao" bean="org.sakaiproject.scorm.dao.api.ContentPackageManifestDao" />

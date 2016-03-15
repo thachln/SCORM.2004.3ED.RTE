@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>sakai-scorm-base</artifactId>
-        <version>12-SNAPSHOT</version>
+        <version>10-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -62,13 +62,12 @@
         </dependency>
         <dependency>
             <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-            <version>${sakai.ehcache.version}</version>
-            <type>pom</type>
+            <artifactId>ehcache-core</artifactId>
+            <type>jar</type>
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>
