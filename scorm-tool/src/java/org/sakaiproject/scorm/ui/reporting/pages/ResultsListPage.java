@@ -215,7 +215,7 @@ public class ResultsListPage extends ConsoleBasePage {
 			csv.append( DOUBLE_QUOTE ).append( learner.getNumberOfAttempts() ).append( DOUBLE_QUOTE ).append( CSV_DELIMITER );
 
 			// Get the summaries for all attempts for the current user
-			List<ActivitySummary> summaries = new ArrayList<>();
+			List<ActivitySummary> summaries = new ArrayList<ActivitySummary>();
 			for( int i = 1; i <= learner.getNumberOfAttempts(); i++ )
 			{
 				summaries.addAll( resultService.getActivitySummaries( learner.getContentPackageId(), learner.getLearnerId(), i ) );
