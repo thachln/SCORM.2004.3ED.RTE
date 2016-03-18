@@ -121,7 +121,7 @@ public class ScormEntityProviderImpl implements ScormEntityProvider, CoreEntityP
 
         String siteID = null;
         String userID = null;
-        List<String> entityRefs = new ArrayList<>();
+        List<String> entityRefs = new ArrayList<String>();
 
         // If the provided prefix is that of the SCORM prefix...
         if( ENTITY_PREFIX.equals( prefixes[0] ) )
@@ -310,7 +310,7 @@ public class ScormEntityProviderImpl implements ScormEntityProvider, CoreEntityP
         logIfDebugEnabled( "getProperties()" );
 
         // If the reference is invalid, throw an exception and exit
-        Map<String, String> properties = new HashMap<>();
+        Map<String, String> properties = new HashMap<String, String>();
         if( StringUtils.isBlank( reference ) )
         {
             throw new IllegalArgumentException( "You must provide a valid reference string" );
