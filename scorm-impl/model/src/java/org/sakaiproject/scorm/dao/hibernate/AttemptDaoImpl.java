@@ -136,7 +136,7 @@ public class AttemptDaoImpl extends HibernateDaoSupport implements AttemptDao {
 	}
 
 	protected Attempt uniqueResult(final DetachedCriteria criteria) {
-	    return (Attempt)getHibernateTemplate().execute(new HibernateCallback() {
+	    return (Attempt)getHibernateTemplate().executeWithNativeSession(new HibernateCallback() {
 			
 			public Object doInHibernate(Session session) throws HibernateException {
 				Criteria s = criteria.getExecutableCriteria(session);
